@@ -13,4 +13,40 @@ const config: Core.Config.Middlewares = [
   'strapi::public',
 ];
 
-export default config;
+export default [
+  'strapi::logger',
+  'strapi::errors',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            'res.cloudinary.com', // Zezwalamy na Cloudinary
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            'res.cloudinary.com', // Zezwalamy na Cloudinary
+          ],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
+  'strapi::cors',
+  'strapi::poweredBy',
+  'strapi::query',
+  'strapi::body',
+  'strapi::session',
+  'strapi::favicon',
+  'strapi::public',
+];

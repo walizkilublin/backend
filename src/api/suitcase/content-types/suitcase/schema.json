@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "suitcases",
+  "info": {
+    "singularName": "suitcase",
+    "pluralName": "suitcases",
+    "displayName": "🧳 Walizki",
+    "description": "Kolekcje walizek twardych i miękkich"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "model_sku": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Hard",
+      "enum": ["Hard", "Soft"]
+    },
+    "is_bestseller": {
+      "type": "boolean",
+      "default": false
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "description_marketing": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "material": {
+      "type": "string",
+      "default": "ABS"
+    },
+    "feature_tsa_lock": {
+      "type": "boolean",
+      "default": true
+    },
+    "feature_360_wheels": {
+      "type": "boolean",
+      "default": true
+    },
+    "feature_expandable": {
+      "type": "boolean",
+      "default": false,
+      "description": "Czy posiada poszerzenie (+5cm)?"
+    },
+    "colors": {
+      "type": "component",
+      "repeatable": true,
+      "component": "inventory.color"
+    },
+    "variants": {
+      "type": "component",
+      "repeatable": true,
+      "component": "inventory.variant"
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo"
+    }
+  }
+}

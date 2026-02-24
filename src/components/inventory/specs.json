@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_inventory_specs",
+  "info": {
+    "displayName": "Specs",
+    "icon": "cog",
+    "description": "Parametry techniczne walizki"
+  },
+  "options": {},
+  "attributes": {
+    "material": {
+      "type": "string",
+      "default": "ABS"
+    },
+    "weight_kg": {
+      "type": "decimal"
+    },
+    "height_cm": {
+      "type": "integer"
+    },
+    "width_cm": {
+      "type": "integer"
+    },
+    "depth_cm": {
+      "type": "integer"
+    },
+    "wheels_type": {
+      "type": "string",
+      "default": "Single 360"
+    },
+    "available_colors": {
+      "type": "json",
+      "required": true
+    },
+    "description_marketing": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

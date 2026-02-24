@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_inventory_colors",
+  "info": {
+    "displayName": "Kolor",
+    "icon": "paint-brush",
+    "description": "Pojedynczy wariant kolorystyczny"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "default": "Czarny"
+    },
+    "hex_code": {
+      "type": "string",
+      "required": true,
+      "default": "#000000"
+    }
+  }
+}

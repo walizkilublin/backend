@@ -1,0 +1,52 @@
+{
+  "kind": "singleType",
+  "collectionName": "global_settings",
+  "info": {
+    "singularName": "global-setting",
+    "pluralName": "global-settings",
+    "displayName": "Global Setting",
+    "description": "Ustawienia globalne strony"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "phone_main": {
+      "type": "string",
+      "required": true
+    },
+    "email_contact": {
+      "type": "email"
+    },
+    "warehouse_address": {
+      "type": "text"
+    },
+    "shipping_prepaid_pln": {
+      "type": "integer",
+      "default": 18,
+      "description": "Koszt wysyłki z góry (np. 18)"
+    },
+    "shipping_cod_pln": {
+      "type": "integer",
+      "default": 26,
+      "description": "Koszt wysyłki za pobraniem (np. 26)"
+    },
+    "hero_headline_line1": {
+      "type": "string",
+      "default": "HURTOWNIA BAGAŻU"
+    },
+    "hero_headline_line2": {
+      "type": "string",
+      "default": "OD 2003"
+    },
+    "hero_subheadline": {
+      "type": "text"
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bags",
+  "info": {
+    "singularName": "bag",
+    "pluralName": "bags",
+    "displayName": "👜 Torebki Damskie",
+    "description": "Torebki, shopperki, listonoszki"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "model_sku": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Shopper",
+      "enum": [
+        "Shopper",
+        "Listonoszka",
+        "Kuferek",
+        "Kopertówka",
+        "Plecak"
+      ]
+    },
+    "price_pln": {
+      "type": "integer",
+      "required": true
+    },
+    "stock_status": {
+      "type": "enumeration",
+      "default": "in_stock",
+      "enum": [
+        "in_stock",
+        "out_of_stock"
+      ]
+    },
+    "is_bestseller": {
+      "type": "boolean",
+      "default": false
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description_marketing": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "material": {
+      "type": "string",
+      "default": "Skóra Ekologiczna"
+    },
+    "feature_adjustable_strap": {
+      "type": "boolean",
+      "default": true
+    },
+    "feature_compartments": {
+      "type": "integer",
+      "default": 1
+    },
+    "height_cm": {
+      "type": "integer"
+    },
+    "width_cm": {
+      "type": "integer"
+    },
+    "depth_cm": {
+      "type": "integer"
+    },
+    "colors": {
+      "type": "component",
+      "component": "inventory.color",
+      "repeatable": true
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo"
+    }
+  }
+}

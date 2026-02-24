@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_inventory_variants",
+  "info": {
+    "displayName": "Wariant (Rozmiar)",
+    "icon": "expand",
+    "description": "Konkretny rozmiar z danej kolekcji"
+  },
+  "options": {},
+  "attributes": {
+    "size_name": {
+      "type": "string",
+      "required": true,
+      "default": "Duża XXL"
+    },
+    "price_pln": {
+      "type": "integer",
+      "required": true
+    },
+    "stock_status": {
+      "type": "enumeration",
+      "enum": ["in_stock", "out_of_stock"],
+      "default": "in_stock"
+    },
+    "capacity_liters": {
+      "type": "integer"
+    },
+    "weight_kg": {
+      "type": "decimal"
+    },
+    "height_cm": {
+      "type": "integer"
+    },
+    "width_cm": {
+      "type": "integer"
+    },
+    "depth_cm": {
+      "type": "integer"
+    },
+    "internal_dimensions": {
+      "type": "string",
+      "description": "N.p. 70x47x27 (opcjonalnie)"
+    },
+    "additional_info": {
+      "type": "string",
+      "description": "N.p. +5cm poszerzenie"
+    }
+  }
+}
