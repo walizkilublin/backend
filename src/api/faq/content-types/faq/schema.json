@@ -25,6 +25,15 @@
       },
       "required": true,
       "description": "Odpowiedź (obsługuje formatowanie HTML)"
+    },
+    "answer2": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": true,
+      "description": "Odpowiedź (obsługuje formatowanie HTML)"
     }
   }
 }
