@@ -20,11 +20,6 @@
       "type": "uid",
       "required": true
     },
-    "model_sku": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
     "category": {
       "type": "enumeration",
       "required": true,

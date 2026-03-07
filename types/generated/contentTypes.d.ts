@@ -508,9 +508,6 @@ export interface ApiBagBag extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     material: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Sk\u00F3ra Ekologiczna'>;
-    model_sku: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     price_pln: Schema.Attribute.Integer & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
@@ -676,9 +673,6 @@ export interface ApiSuitcaseSuitcase extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     material: Schema.Attribute.String & Schema.Attribute.DefaultTo<'ABS'>;
-    model_sku: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
@@ -734,9 +728,6 @@ export interface ApiWalletWallet extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     material: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Sk\u00F3ra Naturalna'>;
-    model_sku: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     orientation: Schema.Attribute.Enumeration<['Horizontal', 'Vertical']> &
       Schema.Attribute.Required &
